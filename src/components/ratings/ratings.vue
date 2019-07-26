@@ -92,11 +92,11 @@ export default {
       this.onlyContent = content;
     },
     needShow(type, text) {
-    // 如果没有内容并且(只看内容)按钮也不是选中状态 则返回 false
+      // 如果没有内容并且(只看内容)按钮也不是选中状态 则返回 false
       if (!text && this.onlyContent) {
         return false;
       }
-    //   如果有内容 则看 上面三个 选中的是 全部 还是 好评 或者是 差评 在根据条件渲染结果
+      //   如果有内容 则看 上面三个 选中的是 全部 还是 好评 或者是 差评 在根据条件渲染结果
       if (this.selectType == ALL) {
         return true;
         // 否则 返回 和上面差评好评状态响应的评论
@@ -108,11 +108,13 @@ export default {
   created() {
     this.$axios.get(`/ratings`).then(v => {
       this.ratings = v.data.data;
-      if (!this.scroll) {
-        this.scroll = new BScroll(this.$refs.rating, {
-          click: true
-        });
-      }
+      this.$nextTick(() => {
+        if (!this.scroll) {
+          this.scroll = new BScroll(this.$refs.rating, {
+            click: true
+          });
+        }
+      });
     });
   },
   components: {

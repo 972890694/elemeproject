@@ -18,7 +18,8 @@
       <div class="circle" @click="toogleContent" :class="{ 'on': contentOnly }">
         <i class="glyphicon glyphicon-ok" :class="{ 'on': contentOnly }"></i>
       </div>
-      <div class="text">只看内容评价</div>
+      <div class="text" @click="toogleContent">只看内容评价</div>
+      
     </div>
   </div>
 </template>
