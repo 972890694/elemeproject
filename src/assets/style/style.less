@@ -1,0 +1,33 @@
+.border-px(@color) {
+    position: relative;
+    &::after {
+        content: ' ';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: @color;
+        height: 1px;
+        transform: scaleY(0.5)
+    }
+}
+
+.border-top(@color) {
+    position: relative;
+    &::after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: @color;
+        height: 1px;
+        transform: scaleY(0.5)
+    }
+}
+.border-none() {
+    &::after {
+        // content: ' ';
+        display: none;
+    }
+}
