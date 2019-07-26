@@ -89,8 +89,7 @@ export default {
 @import "../../assets/style/style.less";
 .rating-select {
   .rating-type {
-    // .border-px(rgba(7, 17, 27,.1));
-    .border-px(red);
+    .border-px(rgba(7, 17, 27,.1));
     padding-bottom: 18px;
     .block {
       border-radius: 1px;
