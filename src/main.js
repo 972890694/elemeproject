@@ -9,7 +9,7 @@ import 'bootstrap/dist/fonts/glyphicons-halflings-regular.ttf'
 import moment from 'moment'
 import axios from 'axios'
 // 设置 axios 请求基地址
-axios.defaults.baseURL = 'http://127.0.0.1:3000'
+axios.defaults.baseURL = 'http://139.155.131.94:3000'
 Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
