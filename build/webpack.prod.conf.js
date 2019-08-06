@@ -64,6 +64,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       filename: config.build.index,
       template: 'index.html',
       inject: true,
+      // commonUrl: config.build.assetsPublicPath,   // html上手动引入的文件前加 renter-web
       minify: {
         removeComments: true,
         collapseWhitespace: true,
